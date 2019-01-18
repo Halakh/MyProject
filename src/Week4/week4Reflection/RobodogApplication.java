@@ -1,6 +1,8 @@
-package week4Reflection;
+package Week4.week4Reflection;
 
-import week4ex9.FileReader;
+
+
+import Week4.week4ex9.FileReader;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +16,7 @@ public class RobodogApplication {
     }
     public static void readFile(FileReader fileReader){
         List<String> newLines = new ArrayList<>();
-        List<String> lines = fileReader.asLines("week4Reflection/robodog.txt");
+        List<String> lines = fileReader.asList("week4Reflection/robodog.txt");
         for (String line: lines){
             System.out.println(line);
             String[] split = line.split("");

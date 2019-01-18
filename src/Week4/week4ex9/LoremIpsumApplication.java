@@ -1,4 +1,5 @@
-package week4ex9;
+package Week4.week4ex9;
+
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class LoremIpsumApplication {
     }
     public static void readFile(FileReader fileReader){
         System.out.println("---Document---");
-        List<String> lines = fileReader.asLines("week4ex9/lorem-ipsum");
+        List<String> lines = fileReader.asList("week4ex9/lorem-ipsum");
         for (String line: lines){
             System.out.println(line);
 

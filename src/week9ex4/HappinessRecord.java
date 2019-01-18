@@ -1,18 +1,25 @@
-package Week4.week4ex11;
-import java.util.Objects;
+package week9ex4;
+
 public class HappinessRecord {
     private String country;
     private Integer rank;
     private Double score;
+
     public HappinessRecord(String country, Integer rank, Double score) {
         this.country = country;
         this.rank = rank;
         this.score = score;
     }
+
     @Override
     public String toString() {
-        return "country"+country + "rank" +rank + "score: "+score;
+        return "HappinessRecord{" +
+                "country='" + country + '\'' +
+                ", rank=" + rank +
+                ", score=" + score +
+                '}';
     }
+
     public String getCountry() {
         return country;
     }

@@ -1,7 +1,8 @@
-package week4ex10;
+package Week4.week4ex10;
 
+import Week4.week4ex9.FileReader;
 import week4ex7.Topic;
-import week4ex9.FileReader;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ public class TopicReader {
 
     public List<Topic> getTopics(String filePath) {
         List<Topic> topics = new ArrayList<>();
-        List<String> lines = fileReader.asLines("week4ex10/topics");
+        List<String> lines = fileReader.asList("week4ex10/topics");
         for (String line : lines) {
             Topic topic = new Topic(line);
             topics.add(topic);

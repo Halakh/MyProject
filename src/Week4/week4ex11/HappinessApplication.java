@@ -1,6 +1,7 @@
-package week4ex11;
+package Week4.week4ex11;
 
-import week4ex9.FileReader;
+
+import Week4.week4ex9.FileReader;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,7 +15,7 @@ public class HappinessApplication {
         FileReader fileReader = new FileReader();
         ////because the output is (lines),
         // we make a new list to add things to
-        List<String> lines = fileReader.asLines("week4ex11/world-happiness-2017.csv");
+        List<String> lines = fileReader.asList("week4ex11/world-happiness-2017.csv");
         //the first line is titles so we remove it
         lines.remove(0);
         //separating the lines into sections to create the happiness record

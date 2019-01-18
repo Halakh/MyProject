@@ -1,4 +1,4 @@
-package week4ex9;
+package Week4.week4ex9;
 
 import java.io.IOException;
 import java.net.URI;
@@ -8,17 +8,32 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class FileReader {
-    public List<String> asLines(String filePath) {
+    public List<String> asList(String filePath) {
         try {
-            URI uri = ClassLoader.getSystemResource(filePath).toURI();
-            Path path = Paths.get(uri);
+            Path path = getPath(filePath);
             return Files.readAllLines(path);
-        } catch (URISyntaxException | IOException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
             return new ArrayList<>();
         }
-
     }
+
+    public Stream<String> asStream(String filePath) {
+        try {
+            Path path = getPath(filePath);
+            return Files.lines(path);
+        } catch (IOException | URISyntaxException e) {
+            e.printStackTrace();
+            return Stream.empty();
+        }
+    }
+
+    private Path getPath(String filePath) throws URISyntaxException {
+        URI uri = ClassLoader.getSystemResource(filePath).toURI();
+        return Paths.get(uri);
+    }
+
 }
