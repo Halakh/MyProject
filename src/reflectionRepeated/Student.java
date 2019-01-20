@@ -1,4 +1,4 @@
-package refelctionweek9;
+package reflectionRepeated;
 
 public class Student {
     private String gender;
@@ -7,6 +7,18 @@ public class Student {
     private Integer readingScore;
     private Integer writingScore;
 
+    public Student(String gender, String levelOfEducation, Integer mathScore, Integer readingScore, Integer writingScore) {
+        this.gender = gender;
+        this.levelOfEducation = levelOfEducation;
+        this.mathScore = mathScore;
+        this.readingScore = readingScore;
+        this.writingScore = writingScore;
+    }
+
+    @Override
+    public String toString() {
+        return gender;
+    }
 
     public String getGender() {
         return gender;
@@ -26,18 +38,5 @@ public class Student {
 
     public Integer getWritingScore() {
         return writingScore;
-    }
-
-    public Student(String gender, String levelOfEducation, Integer mathScore, Integer readingScore, Integer writingScore) {
-        this.gender = gender;
-        this.levelOfEducation = levelOfEducation;
-        this.mathScore = mathScore;
-        this.readingScore = readingScore;
-        this.writingScore = writingScore;
-    }
-
-    @Override
-    public String toString() {
-        return gender;
     }
 }
