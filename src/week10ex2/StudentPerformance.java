@@ -1,9 +1,7 @@
-package refelctionweek9;
+package week10ex2;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class StudentPerformance {

@@ -1,4 +1,4 @@
-package refelctionweek9;
+package week10ex2;
 
 public class Student {
     private String gender;

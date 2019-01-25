@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class StudentReader {
     private FileReader reader=new FileReader();
     public List<Student> getStudents(){
-        return reader.asStream("refelctionweek9/students-performance.csv")
+        return reader.asStream("week10ex2/students-performance.csv")
                 .skip(1)
                 .map(l-> Arrays.asList(l.split(";")))
                 .map(l->new Student(l.get(0),
